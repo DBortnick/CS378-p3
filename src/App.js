@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import dateFormat from './dateformat';
 import './App.css';
 
 const App = () => {

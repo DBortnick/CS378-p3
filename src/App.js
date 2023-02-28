@@ -120,7 +120,7 @@ const App = () => {
             alignItems: 'center',
             justifyContent: 'center', 
           }}>
-            <h3>Temp in °F</h3>
+            <h3>Temp°F</h3>
             {tempData.slice(0,10).map((temp, index) => (
               <p key={index}>{temp}</p>
             ))}

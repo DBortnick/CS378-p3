@@ -40,7 +40,7 @@ const App = () => {
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
-      height: '100vh',
+      height: '150vh',
       width: '100vw',
       backgroundColor: 'lightgray',
       color: 'black',
@@ -48,14 +48,6 @@ const App = () => {
       font: 'largest',
     }}>
       <h1>{curCity} Weather</h1>
-      {weatherAvailable ? (
-        <div>
-          <h2>{dateFormat(timeData[0], "mm/dd/yyyy")}</h2>
-        </div>
-      ) : (
-        <div>
-        </div>
-      )}
       <div>
         <button onClick={() => {
           setCurCity('Dallas');
@@ -83,7 +75,7 @@ const App = () => {
           alignItems: 'center',
           justifyContent: 'center',
           height: '100vh',
-          width: '20vw',
+          width: '15vw',
         }}>
           <div style={{ 
             flex: '0.5',
@@ -94,7 +86,7 @@ const App = () => {
           }}>
             <h3>Time</h3>
             {timeData.slice(0,10).map((time, index) => (
-              <p key={index}>{dateFormat(time, "HH:mm")}</p>
+              <p key={index}>{index+12 + ":00"}</p>
               ))}
           </div>
           <div style={{ 

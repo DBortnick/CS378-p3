@@ -82,7 +82,7 @@ const App = () => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
-          height: '50vh',
+          height: '70vh',
           width: '20vw',
         }}>
           <div style={{ 

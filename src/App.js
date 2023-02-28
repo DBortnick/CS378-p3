@@ -55,6 +55,7 @@ const App = () => {
           borderColor: 'white',
           padding: '5px',
           borderRadius: '50%',
+          fontFamily: "copperplate",
         }}onClick={() => {
           setCurCity('Dallas');
           setNewCity('Replace With Any City');
@@ -65,6 +66,7 @@ const App = () => {
           borderColor: 'white',
           padding: '5px',
           borderRadius: '50%',
+          fontFamily: "copperplate",
         }}onClick={() => {
           setCurCity('Austin');
           setNewCity('Replace With Any City');
@@ -75,6 +77,7 @@ const App = () => {
           borderColor: 'white',
           padding: '5px',
           borderRadius: '50%',
+          fontFamily: "copperplate",
         }}onClick={() => {
           setCurCity('Houston');
           setNewCity('Replace With Any City');
@@ -90,6 +93,7 @@ const App = () => {
           padding: '6px 10px',
           borderRadius: '50%',
           fontSize: '15px',
+          fontFamily: "copperplate",
         }}onClick={() => setCurCity(newCity)}>+</button>
       </row>
       {weatherAvailable ? (

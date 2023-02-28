@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import dateFormat from './dateformat';
+import './App.css';
 
 const App = () => {
   const [curCity, setCurCity] = useState('Austin');
-  const [newCity, setNewCity] = useState('');
+  const [newCity, setNewCity] = useState('Replace With Any City');
   const [timeData, setTimeData] = useState([]);
   const [tempData, setTempData] = useState([]);
   const [weatherAvailable, setWeatherAvailable] = useState(true);
@@ -47,44 +48,68 @@ const App = () => {
       fontFamily: "copperplate",
       font: 'largest',
     }}>
-      <h1>{curCity} Weather</h1>
+      <h1>{curCity} Weather Today</h1>
       <div>
-        <button onClick={() => {
+        <button style= {{
+          color: 'white',
+          backgroundColor: "black",
+          borderColor: 'white',
+          padding: '5px',
+          borderRadius: '50%',
+        }}onClick={() => {
           setCurCity('Dallas');
-          setNewCity('');
+          setNewCity('Replace With Any City');
         }}>Dallas</button>
-        <button onClick={() => {
+        <button style= {{
+          color: 'white',
+          backgroundColor: "black",
+          borderColor: 'white',
+          padding: '5px',
+          borderRadius: '50%',
+        }}onClick={() => {
           setCurCity('Austin');
-          setNewCity('');
+          setNewCity('Replace With Any City');
       }}>Austin</button>
-        <button onClick={() => {
+        <button style= {{
+          color: 'white',
+          backgroundColor: "black",
+          borderColor: 'white',
+          padding: '5px',
+          borderRadius: '50%',
+        }}onClick={() => {
           setCurCity('Houston');
-          setNewCity('');
+          setNewCity('Replace With Any City');
         }}>Houston</button>
       </div>
       <br />
-      <h3>Choose any city:</h3>
       <row>
         <input type="text" value={newCity} onChange={(e) => setNewCity(e.target.value)} />
-        <button onClick={() => setCurCity(newCity)}>+</button>
+        <button style= {{
+          color: 'white',
+          backgroundColor: "black",
+          borderColor: 'white',
+          padding: '6px 10px',
+          borderRadius: '50%',
+          fontSize: '15px',
+        }}onClick={() => setCurCity(newCity)}>+</button>
       </row>
       {weatherAvailable ? (
         <div style={{ 
           display: 'flex',
           flexDirection: 'row',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'left',
           height: '100vh',
-          width: '15vw',
+          width: '35vw',
         }}>
           <div style={{ 
             flex: '0.5',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
+            alignItems: 'right',
             justifyContent: 'center', 
           }}>
-            <h3>Time</h3>
+            <h3>Hour</h3>
             {timeData.slice(0,10).map((time, index) => (
               <p key={index}>{index+12 + ":00"}</p>
               ))}
@@ -96,9 +121,9 @@ const App = () => {
             alignItems: 'center',
             justifyContent: 'center', 
           }}>
-            <h3>Temperature</h3>
+            <h3>Temp in °F</h3>
             {tempData.slice(0,10).map((temp, index) => (
-              <p key={index}>{temp} °F</p>
+              <p key={index}>{temp}</p>
             ))}
           </div>
         </div>
